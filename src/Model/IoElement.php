@@ -87,4 +87,13 @@ class IoElement extends Model
 
         return $this;
     }
+
+	public function jsonSerialize()
+	{
+		return [
+			'eventId' => $this->eventId,
+			'numberOfElements' => $this->numberOfElements,
+			'properties' => $this->properties,
+		];
+	}
 }

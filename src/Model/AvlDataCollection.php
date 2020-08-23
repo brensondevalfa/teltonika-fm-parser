@@ -74,4 +74,12 @@ class AvlDataCollection extends Model
         return $this;
     }
 
+	public function jsonSerialize()
+	{
+		return [
+			'codecId' => $this->codecId,
+			'numberOfData' => $this->numberOfData,
+			'avlData' => $this->avlData
+		];
+	}
 }

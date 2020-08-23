@@ -51,4 +51,12 @@ class IoProperty extends Model
     {
         return $this->value;
     }
+
+	public function jsonSerialize()
+	{
+		return [
+			'id' => $this->id,
+			'value' => $this->value,
+		];
+	}
 }

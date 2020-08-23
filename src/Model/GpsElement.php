@@ -122,4 +122,16 @@ class GpsElement extends Model
     {
         return $this->speed;
     }
+
+	public function jsonSerialize()
+	{
+		return [
+			'longitude' => $this->longitude,
+			'latitude' => $this->latitude,
+			'altitude' => $this->altitude,
+			'angle' => $this->angle,
+			'satellites' => $this->satellites,
+			'speed' => $this->speed,
+		];
+	}
 }

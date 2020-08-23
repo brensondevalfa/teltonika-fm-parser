@@ -79,4 +79,14 @@ class AvlData extends Model
     {
         return $this->ioElement;
     }
+
+	public function jsonSerialize()
+	{
+		return [
+			'timestamp' => $this->timestamp,
+			'priotiry' => $this->priotiry,
+			'gpsElement' => $this->gpsElement,
+			'ioElement' => $this->ioElement,
+		];
+	}
 }
